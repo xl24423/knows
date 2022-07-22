@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    url: jdbc:mysql://localhost:3306/knows?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: root
+    password: xl2442356950...
+  redis:
+    host: localhost
+    port: 6379
+  application:
+    name: auth-service
+  main:
+    allow-bean-definition-overriding: true
+    # 上面的配置是允许Spring容器中已经存在的对象被新对象覆盖
+    # 意思就是两个相同id的对象保存到Spring容器时会不会报错
+    # 设置完true之后,相同id的后一个出现的对象会覆盖掉之前的对象
+    # 当前我们的auth项目内部,会有我们注入的对象覆盖系统原有对象的情况
+server:
+  port: 8010
+logging:
+  level:
+    cn.tedu.knows.auth: debug

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: sys-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+#        指定配置中心的地址 , 可以是别的服务器,nacos既可以当注册中心,也可以当配置中心
+        server-addr: localhost:8848
+#        配置中心 命名空间 不加, 默认是public , 后面跟着 命名空间的 id
+#        namespace: 2b26447b-3eee-4c96-ac1c-9ec683823f84
+#        group: DEFAULT_GROUP
+##        指定配置文件的后缀名
+##        他会自动读取以 [项目名称 application: name].[后缀名称] 自动找到配置中心对应的配置文件,进行配置
+#        file-extension: properties
+  datasource:
+    url: jdbc:mysql://localhost:3306/knows?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: root
+    password: xl2442356950...

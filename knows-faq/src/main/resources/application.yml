@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    url: jdbc:mysql://localhost:3306/knows?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: root
+    password: xl2442356950...
+  redis:
+    host: localhost
+    port: 6379
+  application:
+    name: faq-service
+server:
+  port: 9001
+logging:
+  level:
+    cn.tedu.knows.faq: debug
